@@ -45,14 +45,17 @@ def ejecutar(medio, lapso, ram, memory, instrucciones, velocidad):
 espacioRam = 100
 velocidad = 3.0 
 timeAcum = 0.00
-time = []
 procesos = 100
+time = []
 medio = simpy.Environment()
 cpu = simpy.Resource (medio, capacity = 1)
 ram = simpy.Container(medio, init=espacioRam, capacity = espacioRam)
 esperar = simpy.Resource(medio, capacity=2)
+		
+
 #Semilla para calcular los numeros random.	
 random.seed(2411)
+
 #El intervalo es cambiado en este punto.
 intervalo = 1
 for i in range(procesos):
@@ -68,7 +71,7 @@ print('El promedio de tiempo de ejecucion de los procesos es de: %f ----' % (pro
 sumatoria =0
 for x in time:
     sumatoria += (x-promedio) **2
+	
 desviacion= (sumatoria/(procesos-1))**0.5	
 print "--------------------------"
 print('La Desviacion Estandar del promedio de tiempo de ejecucion es de: %f' %(desviacion))
-
