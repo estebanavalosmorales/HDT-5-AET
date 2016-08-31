@@ -3,7 +3,7 @@
 #Esteban Avalos     15059
 #El siguiente codigo fue armado tomando de referencia los ejemplos subidos a blackboard.
 
-
+/*
 import simpy
 import random
 
@@ -19,3 +19,7 @@ def correr(envir, tiemp, ram, memoria, numeroInstrucciones, vel):
     print('tiempo actual: %f - procesando... proceso admitido... utilizando: %d de RAM' % (envir.now, memoria))
 	
     comparar = 0
+
+*/
+
+# Documento par ala creacion de procesos
